@@ -5,7 +5,7 @@ def find_unique_value(some_list):
     count = Counter(some_list)
     for num in count:
         if count[num] == 1:
-            print(num)  # Выводим уникальное число
+            print(num)
             return num
 
 
