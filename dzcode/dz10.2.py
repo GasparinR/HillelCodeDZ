@@ -2,11 +2,8 @@ import re
 
 
 def first_word(text):
-    """ Поиск первого слова """
-    # Убираем начальные и конечные символы пунктуации, пробелы
     text = text.strip(" ,.")
 
-    # Используем регулярное выражение, чтобы найти первое слово
     match = re.search(r"[a-zA-Z']+", text)
 
     if match:
@@ -15,7 +12,6 @@ def first_word(text):
     return ""
 
 
-# Тесты
 assert first_word("Hello world") == "Hello", 'Test1'
 assert first_word("greetings, friends") == "greetings", 'Test2'
 assert first_word("don't touch it") == "don't", 'Test3'
